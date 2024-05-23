@@ -4,8 +4,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
@@ -51,6 +54,7 @@ fun HomeScreen(navController: NavController){
         floatingActionButtonPosition = FabPosition.Center
     ){
         Column (modifier = Modifier.padding(it)) {
+            ListaRecetas(lista = listOf())
         }
     }
 }
@@ -73,10 +77,43 @@ fun RecetaCard(
                 text = receta.nombre,
                 style = MaterialTheme.typography.titleLarge
             )
-            Row (){
+            Button(
+                onClick = {
+                }
+            ) {
+                Text(text = "Informacion")
             }
         }
     }
+}
+
+@Composable
+fun ListaRecetas(lista: List<Receta>){
+    LazyColumn () {
+        items(lista){
+            RecetaCard(receta = it)
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ListaRecetaPreview(){
+    val recetas: List<Receta> = listOf(
+        Receta(
+            1,
+            "chicharrones en salsa",
+            "asfjnff",
+            "Lorem lorem"
+        ),
+        Receta(
+            2,
+            "Pollo a la crema",
+            "Lorem dhidhf",
+            "Lorem Lorem"
+        )
+    )
+    ListaRecetas(lista = recetas)
 }
 
 @Preview(showBackground = true)
