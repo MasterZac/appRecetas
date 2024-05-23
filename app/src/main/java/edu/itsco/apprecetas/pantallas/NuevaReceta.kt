@@ -2,6 +2,7 @@ package edu.itsco.apprecetas.pantallas
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -32,7 +33,7 @@ fun NuevaRecetaScreen(navController: NavController){
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = "NuevaReceta")
+                    Text(text = "Agrega una receta")
                 },
                 navigationIcon = {
                     IconButton(onClick = {
@@ -69,6 +70,26 @@ fun Formulario(modifier: Modifier = Modifier, navController: NavController){
             onValueChange = { nombre = it},
             label = { Text(text = "Nombre")},
             modifier = Modifier.fillMaxWidth()
+        )
+        OutlinedTextField(
+            value = ingredientes,
+            onValueChange = {ingredientes = it},
+            label = { Text(text = "Ingredientes")},
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(150.dp),
+            singleLine = false,
+            maxLines = 5
+        )
+        OutlinedTextField(
+            value = instrucciones,
+            onValueChange = {instrucciones = it},
+            label = { Text(text = "Instrucciones")},
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(150.dp),
+            singleLine = false,
+            maxLines = 5
         )
     }
 }
