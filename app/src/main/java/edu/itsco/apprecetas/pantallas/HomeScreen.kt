@@ -35,7 +35,9 @@ fun HomeScreen(navController: NavController){
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = "Recetas")
+                    Text(
+                        text = "Recetas",
+                    )
                 }
             )
         },
@@ -75,7 +77,10 @@ fun RecetaCard(
         ) {
             Text(
                 text = receta.nombre,
-                style = MaterialTheme.typography.titleLarge
+                style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(end = 8.dp)
             )
             Button(
                 onClick = {
