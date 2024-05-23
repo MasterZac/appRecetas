@@ -74,7 +74,6 @@ fun RecetaCard(
                 style = MaterialTheme.typography.titleLarge
             )
             Row (){
-
             }
         }
     }
