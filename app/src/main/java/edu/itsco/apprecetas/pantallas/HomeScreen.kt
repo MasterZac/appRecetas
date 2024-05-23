@@ -1,6 +1,7 @@
 package edu.itsco.apprecetas.pantallas
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -50,7 +51,6 @@ fun HomeScreen(navController: NavController){
         floatingActionButtonPosition = FabPosition.Center
     ){
         Column (modifier = Modifier.padding(it)) {
-
         }
     }
 }
@@ -73,6 +73,9 @@ fun RecetaCard(
                 text = receta.nombre,
                 style = MaterialTheme.typography.titleLarge
             )
+            Row (){
+
+            }
         }
     }
 }
