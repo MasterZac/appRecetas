@@ -69,7 +69,7 @@ fun RecetaCard(
             .fillMaxWidth()
             .padding(8.dp)
     ) {
-        Column (
+        Row(
             modifier = Modifier
                 .padding(8.dp)
         ) {
