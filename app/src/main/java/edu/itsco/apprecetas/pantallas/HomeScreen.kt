@@ -71,7 +71,7 @@ fun RecetaCard(
     ) {
         Row(
             modifier = Modifier
-                .padding(8.dp)
+                .padding(vertical = 8.dp)
         ) {
             Text(
                 text = receta.nombre,
