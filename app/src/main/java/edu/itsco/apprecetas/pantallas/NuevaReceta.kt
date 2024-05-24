@@ -32,7 +32,7 @@ import edu.itsco.apprecetas.ui.theme.AppRecetasTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun NuevaRecetaScreen(navController: NavController){
+fun NuevaRecetaScreen(navController: NavController, viewModel: RecetaViewModel){
     Scaffold (
         topBar = {
             TopAppBar(
@@ -128,10 +128,10 @@ fun Formulario(modifier: Modifier = Modifier, navController: NavController){
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewNuevaReceta(){
-    AppRecetasTheme {
-        NuevaRecetaScreen(navController = rememberNavController())
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun PreviewNuevaReceta(){
+//    AppRecetasTheme {
+//        NuevaRecetaScreen(navController = rememberNavController())
+//    }
+//}

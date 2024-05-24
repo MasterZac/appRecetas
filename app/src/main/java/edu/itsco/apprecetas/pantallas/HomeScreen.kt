@@ -30,7 +30,7 @@ import edu.itsco.apprecetas.ui.theme.AppRecetasTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController){
+fun HomeScreen(navController: NavController, viewModel: RecetaViewModel){
     Scaffold (
         topBar = {
             TopAppBar(
@@ -107,13 +107,13 @@ fun ListaRecetaPreview(){
     val recetas: List<Receta> = listOf(
         Receta(
             1,
-            "chicharrones en salsa",
+            "receta1",
             "asfjnff",
             "Lorem lorem"
         ),
         Receta(
             2,
-            "Pollo a la crema",
+            "receta2",
             "Lorem dhidhf",
             "Lorem Lorem"
         )
@@ -121,10 +121,10 @@ fun ListaRecetaPreview(){
     ListaRecetas(lista = recetas)
 }
 
-@Preview(showBackground = true)
-@Composable
-fun HomePreview(){
-    AppRecetasTheme {
-        HomeScreen(navController = rememberNavController())
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun HomePreview(){
+//    AppRecetasTheme {
+//        HomeScreen(navController = rememberNavController())
+//    }
+//}
