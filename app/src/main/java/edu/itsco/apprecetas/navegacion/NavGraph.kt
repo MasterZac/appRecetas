@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import edu.itsco.apprecetas.pantallas.DetalleRecetaScreen
 import edu.itsco.apprecetas.pantallas.HomeScreen
 import edu.itsco.apprecetas.pantallas.NuevaRecetaScreen
 import edu.itsco.apprecetas.pantallas.RecetaViewModel
@@ -22,6 +23,10 @@ fun NavGraph(
         }
         composable(route = Pantallas.NuevaReceta.url){
             NuevaRecetaScreen(navController = navController, viewModel = viewModel)
+        }
+        composable(route = Pantallas.DetalleTarea.url + "/{recetaId}") { navBackStackEntry ->
+            val recetaId = navBackStackEntry.arguments?.getString("recetaId")?.toInt() ?: 0
+            DetalleRecetaScreen(navController = navController, viewModel = viewModel, recetaId = recetaId)
         }
     }
 

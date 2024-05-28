@@ -54,10 +54,13 @@ dependencies {
 
     //implementar Room
     val room = "2.6.1"
+
     implementation("androidx.room:room-runtime:$room")
     implementation("androidx.room:room-ktx:$room")
 //    annotationProcessor("androidx.room:room-compiler:$room")
     ksp("androidx.room:room-compiler:$room")
+
+//    implementation("com.google.code.gson:gson:2.8.8")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

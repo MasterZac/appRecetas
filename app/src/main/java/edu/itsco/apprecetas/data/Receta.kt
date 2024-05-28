@@ -8,6 +8,6 @@ data class Receta (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val nombre: String,
-    val ingredientes: String,
+    val ingredientes: List<String>,
     val instrucciones: String
 )

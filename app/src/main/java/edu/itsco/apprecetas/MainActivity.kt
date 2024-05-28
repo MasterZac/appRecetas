@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                         application = this.application
                     )
                 )
-                AppRecetasTheme {
+                AppRecetasTheme{
                     NavGraph(navController = navController,
                         viewModel = viewModel)
                 }
