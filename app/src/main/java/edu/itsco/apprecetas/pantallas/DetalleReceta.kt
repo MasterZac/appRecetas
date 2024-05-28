@@ -115,7 +115,7 @@ fun verReceta(
                 fontWeight = FontWeight.Bold,
                 fontSize = 24.sp
             ),
-            color = MaterialTheme.colorScheme.primary
+            color = MaterialTheme.colorScheme.primaryContainer
         )
         Spacer(modifier = Modifier.height(8.dp))
         //Ingredientes
